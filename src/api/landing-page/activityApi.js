@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/activities';
+// const API_URL = 'http://localhost:3000/api/activities';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/activity`;
 
 // 🔹 Ambil semua aktivitas
 export const getAllActivities = async () => {

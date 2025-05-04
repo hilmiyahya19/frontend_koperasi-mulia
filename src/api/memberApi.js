@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/member';
+// const API_URL = 'http://localhost:3000/api/member';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/member`; 
 
 // 🔹 Ambil semua anggota
 export const getAllMembers = async () => {

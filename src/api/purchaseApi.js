@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/purchase';
+// const API_URL = 'http://localhost:3000/api/purchase';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/purchase`; 
 
 // 🔹 Ambil semua pembelian
 export const getAllPurchases = async () => {

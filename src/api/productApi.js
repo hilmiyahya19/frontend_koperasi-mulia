@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/product';
+// const API_URL = 'http://localhost:3000/api/product';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/product`; 
 
 // 🔹 Ambil semua produk
 export const getAllProducts = async () => {

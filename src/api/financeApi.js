@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/finance';
+// const API_URL = 'http://localhost:3000/api/finance';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/finance`; 
 
 // 🔹 Ambil semua keuangan
 export const getAllFinances = async () => {

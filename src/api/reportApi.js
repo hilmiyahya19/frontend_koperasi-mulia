@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:3000/api/report";
+// const API_URL = "http://localhost:3000/api/report";
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/report`; 
 
 // Fungsi untuk mengambil statistik anggota
 export const getMemberStats = async () => {

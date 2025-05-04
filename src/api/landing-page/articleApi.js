@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/articles';
+// const API_URL = 'http://localhost:3000/api/articles';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/article`; 
 
 // 🔹 Ambil semua artikel
 export const getAllArticles = async () => {

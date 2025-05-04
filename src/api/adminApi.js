@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api/admin';
+// const API_URL = 'http://localhost:3000/api/admin';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/admin`; 
 
 // 🔹 Mendapatkan semua admin (SuperAdmin saja)
 export const getAllAdmins = async () => {
