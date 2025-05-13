@@ -63,7 +63,7 @@ const TopProducts = () => {
   }, []);
 
   return (
-    <div className="max-w-sm w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6">
+    <div className="w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6">
       <div className="flex justify-between items-start w-full">
         <h5 className="text-xl font-bold text-gray-900 dark:text-white">Produk Terlaris</h5>
       </div>

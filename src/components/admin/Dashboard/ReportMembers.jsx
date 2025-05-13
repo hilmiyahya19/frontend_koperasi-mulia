@@ -85,7 +85,7 @@ const MemberStats = () => {
   }, [stats]);
 
   return (
-    <div className="max-w-sm w-full rounded-lg shadow-sm bg-gray-800 p-4 md:p-6">
+    <div className="w-full rounded-lg shadow-sm bg-gray-800 p-4 md:p-6">
       <div className="flex justify-between">
         <div>
           <h5 className="leading-none text-3xl font-bold text-white pb-2">

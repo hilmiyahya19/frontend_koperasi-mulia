@@ -86,7 +86,7 @@ const FinanceStats = () => {
   }, []);
 
   return (
-    <div className="max-w-sm w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6">
+    <div className="w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6">
       <div className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-3">
         <dl>
           <dt className="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">Keuntungan</dt>
