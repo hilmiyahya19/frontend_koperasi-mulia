@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6 text-white">
             <li><Link to="hero" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Beranda</Link></li>
-            <li><Link to="promo" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Promo</Link></li>
+            <li><Link to="promo" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Produk</Link></li>
             <li><Link to="service" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Layanan</Link></li>
             <li><Link to="article" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Artikel</Link></li>
             <li><Link to="activity" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Kegiatan</Link></li>
