@@ -26,8 +26,8 @@ const MemberRegister = () => {
             Swal.fire('Registrasi Berhasil!', 'Akun Anda menunggu persetujuan admin.', 'success');
         } catch (error) {
             let errorMessage = 'Registrasi gagal. Silakan coba lagi.';
-            if (error.message.includes('Email atau username sudah digunakan')) {
-                errorMessage = 'Email atau username sudah digunakan. Silakan gunakan yang lain.';
+            if (error.message.includes('Nama, email, atau username sudah digunakan')) {
+                errorMessage = 'Nama, email, atau username sudah digunakan. Silakan gunakan yang lain.';
             }
             Swal.fire('Registrasi Gagal!', errorMessage, 'error');
         }
