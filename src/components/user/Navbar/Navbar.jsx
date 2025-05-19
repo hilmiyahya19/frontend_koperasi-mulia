@@ -29,15 +29,18 @@ const Navbar = () => {
             <li><Link to="activity" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Kegiatan</Link></li>
             <li><Link to="contact" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300">Kontak</Link></li>
           </ul>
-          {/* <button onClick={() => navigate('/anggota/login')} className="ml-6 bg-green-500 text-gray-900 px-4 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold">
-            Login
-          </button> */}
           <button 
-            onClick={() => window.open('/member/login', '_blank')}
+            onClick={() => navigate('/member/login')}
             className="ml-6 bg-green-500 text-gray-900 px-4 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold"
           >
             Login
           </button>
+          {/* <button 
+            onClick={() => window.open('/member/login', '_blank')}
+            className="ml-6 bg-green-500 text-gray-900 px-4 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold"
+          >
+            Login
+          </button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -63,15 +66,18 @@ const Navbar = () => {
           <li><Link to="activity" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300" onClick={toggleMenu}>Kegiatan</Link></li>
           <li><Link to="contact" smooth={true} duration={500} className="cursor-pointer hover:text-green-400 transition duration-300" onClick={toggleMenu}>Kontak</Link></li>
         </ul>
-        {/* <button onClick={() => { navigate('/anggota/login'); toggleMenu(); }} className="mt-6 bg-green-500 text-gray-900 px-6 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold">
-          Login
-        </button> */}
         <button 
-          onClick={() => { window.open('/member/login', '_blank'); toggleMenu(); }} 
+          onClick={() => { navigate('/member/login'); toggleMenu(); }} 
           className="mt-6 bg-green-500 text-gray-900 px-6 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold"
         >
           Login
         </button>
+        {/* <button 
+          onClick={() => { window.open('/member/login', '_blank'); toggleMenu(); }} 
+          className="mt-6 bg-green-500 text-gray-900 px-6 py-2 rounded-lg hover:bg-green-400 transition duration-300 font-semibold"
+        >
+          Login
+        </button> */}
       </div>
     </nav>
   );
