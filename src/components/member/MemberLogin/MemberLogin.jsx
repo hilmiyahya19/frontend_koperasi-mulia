@@ -52,7 +52,13 @@ const MemberLogin = ({ setToken, setRole }) => {
                 {/* Tambahkan Link ke Registrasi */}
                 <p className="text-center text-white mt-4">
                     Belum punya akun?{' '}
-                    <Link to="/member/register" className="text-green-400 underline">Daftar di sini</Link>
+                    {/* <Link to="/member/register" className="text-green-400 underline">Daftar di sini</Link> */}
+                    <span 
+                        className="text-green-400 underline cursor-pointer"
+                        onClick={() => navigate('/member/register')}
+                    >
+                        Daftar di sini
+                    </span>
                 </p>
             </div>
         </div>
