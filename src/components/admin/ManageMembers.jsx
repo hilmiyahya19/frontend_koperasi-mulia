@@ -7,6 +7,7 @@ export default function ManageMembers() {
   const [search, setSearch] = useState("");
   const [form, setForm] = useState({ fullName: "", email: "", username: "", phone: "", status: "pending", password: "" });
   const [editingId, setEditingId] = useState(null);
+  const [filterStatus, setFilterStatus] = useState("all");
 
   useEffect(() => {
     fetchMembers();
@@ -115,6 +116,14 @@ export default function ManageMembers() {
     }
   };
 
+  // Filter and search logic
+  const filteredMembers = members
+  .filter(m => m.fullName.toLowerCase().includes(search.toLowerCase()))
+  .filter(m => {
+    if (filterStatus === "all") return true;
+    return m.status === filterStatus;
+  });
+
   return (
     <div className="p-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 min-h-screen text-white">
       <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-400 mb-4 text-center md:text-left">Halaman Manajemen Anggota</h1>
@@ -137,10 +146,28 @@ export default function ManageMembers() {
         </form>
       </div>
 
-      {/* Search Bar */}
-      <div className="my-4 flex gap-2">
-        <input placeholder="Cari anggota" className="p-2 rounded bg-gray-700 text-white flex-grow" value={search} onChange={(e) => setSearch(e.target.value)} />
-        <button className="bg-green-600 hover:bg-green-500 p-2 rounded">🔍</button>
+      {/* Search and Filter */}
+      <div className="my-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+        <div className="flex gap-2 flex-grow">
+          <input
+            placeholder="Cari anggota"
+            className="p-2 rounded bg-gray-700 text-white flex-grow"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button className="bg-green-600 hover:bg-green-500 p-2 rounded">🔍</button>
+        </div>
+        <div>
+          <select
+            className="p-2 rounded bg-gray-700 text-white"
+            value={filterStatus}
+            onChange={(e) => setFilterStatus(e.target.value)}
+          >
+            <option value="all">Semua Anggota</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+          </select>
+        </div>
       </div>
 
       {/* Tabel dengan overflow */}
@@ -158,7 +185,7 @@ export default function ManageMembers() {
           </tr>
         </thead>
         <tbody>
-          {members.filter(m => m.fullName.toLowerCase().includes(search.toLowerCase())).map((member, index) => (
+          {filteredMembers.map((member, index) => (
             <tr key={member._id} className="border-b border-gray-700">
               <td className="p-2 text-center">{index + 1}</td>
               <td className="p-2 text-center">{member.fullName}</td>
